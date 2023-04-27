@@ -11,6 +11,20 @@ index 21f1a06..0ff66f3 100644
    }
  }
 
+diff --git a/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp b/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
+index d916a45..8ca15f3 100644
+--- a/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
++++ b/node_modules/react-native/ReactCommon/yoga/yoga/Yoga.cpp
+@@ -2282,7 +2282,7 @@ static float YGDistributeFreeSpaceSecondPass(
+         depth,
+         generationCount);
+     node->setLayoutHadOverflow(
+-        node->getLayout().hadOverflow() |
++        node->getLayout().hadOverflow() ||
+         currentRelativeChild->getLayout().hadOverflow());
+   }
+   return deltaFreeSpace;
+
 diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
 new file mode 100644
 index 0000000..361f5fb
